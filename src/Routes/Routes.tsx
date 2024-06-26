@@ -3,9 +3,10 @@ import App from "../App";
 import HomePage from "../Pages/HomePage/HomePage";
 import SearchPage from "../Pages/SearchPage/SearchPage";
 import CompanyPage from "../Pages/CompanyPage/CompanyPage";
-import CompanyProfilePage from "../Components/CompanyProfile/CompanyProfile";
-import IncomeStatementPage from "../Components/IncomeStatement/IncomeStatement";
+import CompanyProfile from "../Components/CompanyProfile/CompanyProfile";
+import IncomeStatement from "../Components/IncomeStatement/IncomeStatement";
 import DesignPage from "../Pages/DesignPage/DesignPage";
+import BalanceSheet from "../Components/BalanceSheet/BalanceSheet";
 
 export const router = createBrowserRouter([
   {
@@ -19,8 +20,9 @@ export const router = createBrowserRouter([
         path: "company/:ticker",
         element: <CompanyPage />,
         children: [
-          { path: "company-profile", element: <CompanyProfilePage /> },
-          { path: "income-statement", element: <IncomeStatementPage /> },
+          { path: "company-profile", element: <CompanyProfile /> },
+          { path: "income-statement", element: <IncomeStatement /> },
+          { path: "balance-sheet", element: <BalanceSheet /> },
         ],
       },
     ],
