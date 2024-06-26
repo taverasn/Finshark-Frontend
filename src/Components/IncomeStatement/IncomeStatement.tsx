@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { getIncomeStatement } from "../../api";
 import RatioList from "../RatioList/RatioList";
 import Table from "../Table/Table";
+import Spinner from "../Spinner/Spinner";
 
 interface Props {}
 
@@ -81,7 +82,9 @@ const IncomeStatementPage = (props: Props) => {
           <Table config={configs} data={incomeStatement} />
         </>
       ) : (
-        <>Loading...</>
+        <>
+          <Spinner />
+        </>
       )}
     </>
   );
