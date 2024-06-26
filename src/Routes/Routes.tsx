@@ -3,8 +3,8 @@ import App from "../App";
 import HomePage from "../Pages/HomePage/HomePage";
 import SearchPage from "../Pages/SearchPage/SearchPage";
 import CompanyPage from "../Pages/CompanyPage/CompanyPage";
-import CompanyProfilePage from "../Pages/CompanyProfilePage/CompanyProfilePage";
-import IncomeStatementPage from "../Pages/IncomeStatementPage/IncomeStatementPage";
+import CompanyProfilePage from "../Components/CompanyProfile/CompanyProfile";
+import IncomeStatementPage from "../Components/IncomeStatement/IncomeStatement";
 import DesignPage from "../Pages/DesignPage/DesignPage";
 
 export const router = createBrowserRouter([
