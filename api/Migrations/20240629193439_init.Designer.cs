@@ -12,7 +12,7 @@ using api.Data;
 namespace api.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20240629030753_init")]
+    [Migration("20240629193439_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -73,7 +73,7 @@ namespace api.Migrations
                     b.Property<decimal>("LastDiv")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<long>("MatketCap")
+                    b.Property<long>("MarketCap")
                         .HasColumnType("bigint");
 
                     b.Property<decimal>("Purchase")
@@ -85,7 +85,7 @@ namespace api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Stock");
+                    b.ToTable("Stocks");
                 });
 
             modelBuilder.Entity("api.Models.Comment", b =>
