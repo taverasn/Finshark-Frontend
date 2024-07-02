@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { CompanyTenK } from "../../company";
 import TenKFinderItem from "./TenKFinderItem/TenKFinderItem";
+import { v4 as uuidv4 } from "uuid";
 import Spinner from "../Spinner/Spinner";
 import { getTenK } from "../../api";
 
@@ -21,7 +22,7 @@ const TenKFinder = ({ ticker }: Props) => {
     <div className="inline-flex rounded-md shadow-sm m-4">
       {companyData ? (
         companyData?.slice(0, 5).map((tenK) => {
-          return <TenKFinderItem tenK={tenK} />;
+          return <TenKFinderItem key={uuidv4()} tenK={tenK} />;
         })
       ) : (
         <Spinner />
