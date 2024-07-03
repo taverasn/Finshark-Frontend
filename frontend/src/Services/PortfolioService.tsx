@@ -6,7 +6,8 @@ import {
 } from "../Models/Portfolio";
 import { handleError } from "../Helpers/ErrorHandler";
 
-const api = "http://localhost:5220/api/portfolio/";
+const api =
+  "https://finshark-frontend20240702155930.azurewebsites.net/api/portfolio/";
 
 export const portfolioAddAPI = async (symbol: string) => {
   try {
