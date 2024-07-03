@@ -2,7 +2,7 @@ import axios from "axios";
 import { handleError } from "../Helpers/ErrorHandler";
 import { UserProfileToken } from "../Models/User";
 
-const api = "https://finshark-frontend20240702155930.azurewebsites.net/api/";
+const api = "https://finshark-api.azurewebsites.net/api/";
 
 export const loginAPI = async (username: string, password: string) => {
   try {
