@@ -100,9 +100,14 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
 }
+app.UseSwagger();
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+    c.RoutePrefix = "";
+});
+
 
 app.UseHttpsRedirection();
 
@@ -111,7 +116,7 @@ app.UseCors(x => {
     .AllowAnyHeader()
     .AllowAnyMethod()
     .AllowCredentials()
-    //.WithOrigins("https://localhost:44351))
+    .WithOrigins("https://finshark-frontend20240702155930.azurewebsites.net/")
     .SetIsOriginAllowed(origin => true);
 });
 
